@@ -1,0 +1,49 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Włącz edycję lokalną (opcjonalnie, do testów)
+# local_backend: true
+
+media_folder: "images"
+public_folder: "/images"
+
+# Logo w panelu CMS
+logo_url: "/images/Logo-EASYCAR.svg"
+
+collections:
+  - name: "strony"
+    label: "Strony"
+    files:
+      - name: "strona-glowna"
+        label: "Strona główna"
+        file: "index.html"
+        fields:
+          - { label: "Tytuł strony", name: "title", widget: "string" }
+          - { label: "Nagłówek hero", name: "hero_heading", widget: "string" }
+          - { label: "Tekst przycisku hero", name: "hero_button", widget: "string" }
+
+      - name: "zasady-wynajmu"
+        label: "Zasady wynajmu"
+        file: "zasady-wynajmu.html"
+        fields:
+          - { label: "Tytuł strony", name: "title", widget: "string" }
+
+      - name: "faq"
+        label: "FAQ - Pytania i odpowiedzi"
+        file: "najczesciej-zadawane-pytania.html"
+        fields:
+          - { label: "Tytuł strony", name: "title", widget: "string" }
+
+  - name: "dane-kontaktowe"
+    label: "Dane kontaktowe"
+    files:
+      - name: "kontakt"
+        label: "Informacje kontaktowe"
+        file: "_data/contact.json"
+        fields:
+          - { label: "Telefon", name: "phone", widget: "string", default: "+48 604 29 19 29" }
+          - { label: "Email", name: "email", widget: "string", default: "kontakt@easycar24.pl" }
+          - { label: "Adres biura", name: "office_address", widget: "string", default: "Lublin, J. Franczaka \"Lalka\" 43" }
+          - { label: "Adres lotnisko", name: "airport_address", widget: "string", default: "Port Lotniczy Lublin, Świdnik" }
+          - { label: "Godziny otwarcia", name: "hours", widget: "string", default: "Czynne 24/7" }

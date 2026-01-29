@@ -1,0 +1,16 @@
+# ZIP export
+*.zip
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Local
+.env
+.env.local
